@@ -1,0 +1,12 @@
+<h2><%= @restaurant.name %></h2>
+<div id="description">
+  <%= @restaurant.description %>
+</div>
+<ul>
+  <li><span class="attribute">Address: </span><%=@restaurant.address %></li>
+  <li><span class="attribute">Telephone: </span><%=@restaurant.telephone %></li>
+  <li><span class="attribute">Cuisine: </span><%=@restaurant.cuisine %></li>
+  <li><span class="attribute">Hours: </span><%=@restaurant.hours %></li>
+  <li><span class="attribute">Reservations: </span><%=@restaurant.reservations %></li>
+</ul>
+<%= link_to 'Home', :root %>
