@@ -1,3 +1,4 @@
 class Tag < ActiveRecord::Base
-  has_and_belongs_to_many :restaurants
+  has_many :taggings
+  has_many :restaurants, through: :taggings
 end
