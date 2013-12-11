@@ -7,3 +7,12 @@ a.hours = "6PM-Midnight, 7 days a week"
 a.reservations = "Call a few weeks in advance. Limited tables available online. Full dinner available at community table and bar."
 a.cuisine = "Modern American Classic"
 a.save
+a = Restaurant.new
+a.name = "Magnolia"
+a.description = "A modern American classic. Great burgers, beer and more. Amazing fried chicken available only on Thursdays."
+a.address = "Masonic and Haight"
+a.telephone = "415-111-1111"
+a.hours = "11AM-2AM, 7 days a week"
+a.reservations = "No reservations."
+a.cuisine = "Gastro-brewpub"
+a.save
