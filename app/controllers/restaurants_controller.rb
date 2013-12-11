@@ -9,8 +9,21 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
 
+  def new
+    @restaurant = Restaurant.new
+  end
+
+  def create
+    @restaurant = Restaurant.create(restaurant_params)
+    redirect_to @restaurant
+  end
+
   private
   def get_lists
     @lists = List.all
   end
+
+  def restaurant_params
+   params.require(:restaurant).permit(:name, :description, :website, :cuisine)
+  end 
 end
