@@ -18,9 +18,11 @@
 <%= yield %>
 </div>
 <div class="large-4 columns">
+  <h3>our favorites</h3>
   <ul class="no-bullet">
-    <li><a href="#">five great for burgers</a></li>
-    <li>five great for pizza</li>
+  <%= render partial: "list", collection: @lists %>
+    <!-- <li><a href="#">five great for burgers</a></li> -->
+<!--     <li>five great for pizza</li>
     <li>five great for craft beer</li>
     <li>five great for wine</li>
     <li>five great for mexican</li>
@@ -28,7 +30,7 @@
     <li>five great for vegetarians</li>
     <li>five great for kids</li>
     <li>five great for out of town guests</li>
-    <li>five great for expense accounts</li>
+    <li>five great for expense accounts</li> -->
 </ul>
   </div>
 </div>
