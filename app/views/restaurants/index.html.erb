@@ -1,5 +1,7 @@
-<ul>
 <% @restaurants.each do |restaurant| %>
-<li><%= link_to restaurant.name, restaurant %></li>
+  <h2><%= restaurant.name %></h2>
+  <p><%= restaurant.description %></p>
+  <p><%= restaurant.address %></p>
+  <p><%= link_to 'Details', restaurant %></p> 
 <% end %>
 </ul>
