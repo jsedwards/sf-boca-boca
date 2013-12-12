@@ -10,3 +10,7 @@
   <li><span class="attribute">Reservations: </span><%=@restaurant.reservations %></li>
 </ul>
 <%= link_to 'Home', :root %>
+<% if logged_in? %>
+<%= link_to 'logout', session_path(current_user), method: :delete %>
+<%= link_to 'edit', edit_restaurant_path(@restaurant) %>
+<% end %>

@@ -8,4 +8,8 @@ class UsersController < ApplicationController
     User.create(params[:user].permit(:name, :email, :password, :password_confirmation))
     redirect_to :root
   end
+
+  def index
+    render partial: 'login'
+  end
 end
