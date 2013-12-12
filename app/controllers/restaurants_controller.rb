@@ -18,6 +18,19 @@ class RestaurantsController < ApplicationController
     redirect_to @restaurant
   end
 
+  def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    if @restaurant.update_attributes(restaurant_params)
+      redirect_to @restaurant
+    else
+      render 'edit'
+    end
+  end
+
   private
   def get_lists
     @lists = List.all

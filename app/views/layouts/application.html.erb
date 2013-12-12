@@ -11,6 +11,9 @@
   <div class="row">
 <div class="larg-12 columns"><h1>San Francisco by Mouth</h1>
 <h3>a curated list of places to enjoy in the city</h3>
+<% if logged_in? %>
+<%= link_to 'logout', session_path(current_user), method: :delete %>
+<% end %>
 </div>
 </div>
 <div class="row">
