@@ -1,4 +1,6 @@
  class ListsController < ApplicationController
+  before_filter :authenticate_user, only: [:new, :create, :edit, :update, :destroy]
+
   def new
     @restaurants = Restaurant.all 
     @list = List.new
@@ -56,5 +58,9 @@
   private
   def list_params
     params[:list].permit(:name)
+  end
+
+  def authenticate_user
+    redirect_to lists_path unless logged_in?
   end
 end
