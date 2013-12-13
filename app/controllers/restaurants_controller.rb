@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
   before_action :get_lists
+  before_filter :authenticate_user, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @restaurants = Restaurant.all 
@@ -39,4 +40,8 @@ class RestaurantsController < ApplicationController
   def restaurant_params
    params.require(:restaurant).permit(:name, :description, :website, :cuisine, :address, :reservations, :hours)
   end 
+
+  def authenticate_user
+    redirect_to restaurants_path unless logged_in?
+  end
 end
