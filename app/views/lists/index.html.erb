@@ -1,0 +1,6 @@
+<ul class="no-bullet">
+<% @lists.each do |l| %>
+<% unless l.listings.empty? %> <li><%= link_to l.name, list_path(l) %></li>
+<% end %>
+<% end %>
+</ul>

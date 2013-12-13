@@ -41,6 +41,7 @@ end
 group :test, :development do 
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'debugger'
 end
 
 # Use ActiveModel has_secure_password
