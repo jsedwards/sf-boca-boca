@@ -4,5 +4,5 @@ SfByMouth::Application.routes.draw do
   resources :users
   resources :sessions, only: [:create, :destroy, :index]
   resources :listings, only: [:create, :edit, :index, :show, :new]
-  resources :lists, only: [:create, :edit, :index, :show, :new, :edit]
+  resources :lists
 end

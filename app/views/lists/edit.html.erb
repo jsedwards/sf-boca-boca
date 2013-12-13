@@ -1,18 +1,13 @@
 <%= @list.name %>
-<% @list.listings.each do |r| %>
-<% @restaurant = Restaurant.find(r.restaurant_id) %>
-<p><%= link_to @restaurant.name, restaurant_path(@restaurant) %></p>
-<% end %>
-
-<%= form_for @listing do |f| %>
-<%= f.text_field :name %>
+<%= form_for @list do |f| %>
 <%= f.label :name %>
+<%= f.text_field :name %>
 <% @restaurants.each do |r| %>
-
-<%= check_box_tag "restaurant_ids[]", r.id %>
+<%= check_box_tag "restaurant_ids[]", r.id  %>
 <%= label_tag(r.name) %>
 <br/>
 <% end %>
-<% options_for_select(["hello",1],["goodbye",2]) %>
-<%= f.submit 'create_list' %>
+<%= f.submit 'update list' %>
 <% end %>
+<%= link_to 'delete list', @list,  method: :delete, confirm: "Are you sure?" %>
+<%= link_to 'list home', lists_path %>
