@@ -1,0 +1,12 @@
+<%= form_for @list do |f| %>
+<%= f.text_field :name %>
+<%= f.label :name %>
+<% @restaurants.each do |r| %>
+
+<%= check_box_tag "restaurant_ids[]", r.id %>
+<%= label_tag(r.name) %>
+<br/>
+<% end %>
+<% options_for_select(["hello",1],["goodbye",2]) %>
+<%= f.submit 'create_list' %>
+<% end %>

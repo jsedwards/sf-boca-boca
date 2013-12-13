@@ -1,0 +1,7 @@
+<% @lists.each do |l| %>
+<%= link_to l.name, listing_path(l) %>
+<% l.listings.each do |r| %>
+<% @restaurant = Restaurant.find(r.restaurant_id) %>
+<p><%= link_to @restaurant.name, restaurant_path(@restaurant) %></p>
+<% end %>
+<% end %>
