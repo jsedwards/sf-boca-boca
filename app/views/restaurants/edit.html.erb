@@ -1,23 +1,6 @@
 <h2><%= @restaurant.name %></h2>
-<%= form_for @restaurant do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :description %>
-<%= f.text_field :description %>
-<%= f.label :address %>
-<%= f.text_field :address %>
-<%= f.label :telephone %>
-<%= f.text_field :telephone %>
-<%= f.label :reservations %>
-<%= f.text_field :reservations %>
-<%= f.label :website %>
-<%= f.text_field :website %>
-<%= f.label :cuisine %>
-<%= f.text_field :cuisine %>
-<%= f.submit 'update restaurant' %>
-<% end %>
+<%= render 'form' %>
 <%= link_to 'Home', :root %>
 <% if logged_in? %>
 <%= link_to 'logout', session_path(current_user), method: :delete %>
-<%= link_to 'edit', edit_restaurant_path(@restaurant) %>
 <% end %>
