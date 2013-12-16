@@ -2,7 +2,11 @@
 <%= f.label :name %>
 <%= f.text_field :name %>
 <% @restaurants.each do |r| %>
+<% if params[r.id] %>
+<%= check_box_tag "restaurant_ids[]", r.id, checked: true  %>
+<% else %>
 <%= check_box_tag "restaurant_ids[]", r.id  %>
+<% end %>
 <%= label_tag(r.name) %>
 <br/>
 <% end %>
