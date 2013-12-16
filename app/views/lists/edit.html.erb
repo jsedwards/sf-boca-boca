@@ -1,13 +1,4 @@
 <%= @list.name %>
-<%= form_for @list do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<% @restaurants.each do |r| %>
-<%= check_box_tag "restaurant_ids[]", r.id  %>
-<%= label_tag(r.name) %>
-<br/>
-<% end %>
-<%= f.submit 'update list' %>
-<% end %>
+<%= render 'form' %>
 <%= link_to 'delete list', @list,  method: :delete, confirm: "Are you sure?" %>
 <%= link_to 'list home', lists_path %>
