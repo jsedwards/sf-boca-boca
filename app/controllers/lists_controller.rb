@@ -23,6 +23,7 @@
 
   def show 
     @list = List.find(params[:id])
+    @lists = List.all
   end
 
   def edit
@@ -31,6 +32,7 @@
       params[listing.restaurant_id] = true
     end
     @restaurants = Restaurant.all
+    @lists = List.all
   end
 
   def update
