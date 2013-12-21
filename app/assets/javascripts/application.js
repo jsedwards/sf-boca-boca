@@ -14,5 +14,4 @@
 //= require jquery_ujs
 //= require modernizr
 //= require foundation.min
-//= require turbolinks
 //= require_tree .
